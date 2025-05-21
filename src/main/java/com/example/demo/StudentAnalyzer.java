@@ -1,7 +1,7 @@
 package com.example.demo;
 
 import java.util.List;
-//issues 1
+
 
 public class StudentAnalyzer {
 
@@ -10,19 +10,19 @@ public class StudentAnalyzer {
      * @param scores danh sách điểm số từ 0 đến 10
      * @return số học sinh đạt loại Giỏi (>= 8.0)
      */
-    public int countExcellentStudents(List<Double> scores) {
-        if (scores == null || scores.isEmpty()) {
-            return 0;
-        }
-
-        int count = 0;
-        for (Double score : scores) {
-            if (score != null && score >= 8.0 && score <= 10.0) {
-                count++;
-            }
-        }
-        return count;
+    // issue 1: Improved validation for excellent students
+public int countExcellentStudents(List<Double> scores) {
+    if (scores == null || scores.isEmpty()) {
+        return 0;
     }
+    int count = 0;
+    for (Double score : scores) {
+        if (score != null && score >= 8.0 && score <= 10.0) {
+            count++;
+        }
+    }
+    return count;
+}
 
     /**
      * Tính điểm trung bình hợp lệ (từ 0 đến 10)
