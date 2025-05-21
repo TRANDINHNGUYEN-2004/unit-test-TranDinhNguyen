@@ -29,20 +29,19 @@ public int countExcellentStudents(List<Double> scores) {
      * @param scores danh sách điểm
      * @return điểm trung bình của các điểm hợp lệ
      */
-    // issue 2
-    public double calculateValidAverage(List<Double> scores) {
-        if (scores == null || scores.isEmpty()) {
-            return 0.0;
-        }
-
-        double total = 0.0;
-        int count = 0;
-        for (Double score : scores) {
-            if (score != null && score >= 0.0 && score <= 10.0) {
-                total += score;
-                count++;
-            }
-        }
-        return count > 0 ? total / count : 0.0;
+    // issue 2: Calculate average of valid scores
+public double calculateValidAverage(List<Double> scores) {
+    if (scores == null || scores.isEmpty()) {
+        return 0.0;
     }
+    double total = 0.0;
+    int count = 0;
+    for (Double score : scores) {
+        if (score != null && score >= 0.0 && score <= 10.0) {
+            total += score;
+            count++;
+        }
+    }
+    return count > 0 ? total / count : 0.0;
+}
 }
