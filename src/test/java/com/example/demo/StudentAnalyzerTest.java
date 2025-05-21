@@ -5,7 +5,8 @@ import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-//Issue 3
+// Issue #3: Unit tests for StudentAnalyzer methods
+
 public class StudentAnalyzerTest {
     private final StudentAnalyzer analyzer = new StudentAnalyzer();
 
