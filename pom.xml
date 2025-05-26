@@ -58,6 +58,7 @@
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+
                     <!-- Tạo báo cáo sau khi test -->
                     <execution>
                         <id>report</id>
@@ -65,6 +66,11 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <excludes>
+                                <exclude>com/example/demo/DemoApplication*</exclude>
+                            </excludes>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

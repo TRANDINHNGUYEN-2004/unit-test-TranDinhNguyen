@@ -81,4 +81,46 @@ public class StudentAnalyzerTest {
     public void testCalculateValidAverageWithNull() {
         assertEquals(7.75, analyzer.calculateValidAverage(Arrays.asList(null, 8.5, 7.0)), 0.01);
     }
+    @Test
+    void testCountExcellentStudents_NullList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        int result = analyzer.countExcellentStudents(null);
+        assertEquals(0, result);
+    }
+
+    @Test
+    void testCountExcellentStudents_EmptyList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        int result = analyzer.countExcellentStudents(Collections.emptyList());
+        assertEquals(0, result);
+    }
+
+    @Test
+    void testCalculateValidAverage_NullList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        double result = analyzer.calculateValidAverage(null);
+        assertEquals(0.0, result);
+    }
+
+    @Test
+    void testCalculateValidAverage_EmptyList() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        double result = analyzer.calculateValidAverage(Collections.emptyList());
+        assertEquals(0.0, result);
+    }
+
+    // Các test bổ sung giúp kiểm thử logic chính
+    @Test
+    void testCountExcellentStudents_ValidData() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        int result = analyzer.countExcellentStudents(Arrays.asList(9.0, 8.5, 7.0, null, 10.0));
+        assertEquals(3, result);  // 9.0, 8.5, 10.0 hợp lệ
+    }
+
+    @Test
+    void testCalculateValidAverage_ValidData() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        double result = analyzer.calculateValidAverage(Arrays.asList(9.0, 8.0, 10.0, null, 11.0));
+        assertEquals((9.0 + 8.0 + 10.0) / 3, result);
+    }
 }

@@ -43,11 +43,10 @@ mvn clean test
 - Kết quả đo:
   - StudentAnalyzer.java: 100% Line, 100% Branch coverage
   - Tất cả logic đều được kiểm thử kỹ lưỡng.
-  | Thống kê                    | Kết quả                               |
-| --------------------------- | ------------------------------------- |
-| Tổng số lớp                 | 2                                     |
-| Bao phủ lệnh (Instructions) | **94%** (90/95 lệnh đã được kiểm thử) |
-| Bao phủ nhánh (Branches)    | **92%** (24/26 nhánh được kiểm thử)   |
-| Số method được kiểm thử     | 5 (100%)                              |
-| Số dòng được kiểm thử       | 22/23 dòng (≈96%)                     |
-| Tổng số test run            | 15 (0 lỗi, 0 thất bại)                |
+| Mục              | Kết quả |
+| ---------------- | ------- |
+| **Instructions** | 100%    |
+| **Branches**     | 100%    |
+| **Lines**        | 100%    |
+| **Methods**      | 100%    |
+| **Classes**      | 100%    |
